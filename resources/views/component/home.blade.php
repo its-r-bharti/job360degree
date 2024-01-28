@@ -13,6 +13,7 @@
 </html> --}}
 @extends('component.layout.app')
 @section('hero')
+{{-- @section('customJs') --}}
 
 
 <section class="section-0 lazy d-flex bg-image-style dark align-items-center "   class="" data-bg="{{asset('assets/images/banner5.jpg')}}">

@@ -81,6 +81,10 @@ class AccountController extends Controller
         return view('component.account.profile');
     }
     
+    public function logout(){
+        Auth::logout();
+        return redirect()->route('account.login');
+    }
 
 
 }
