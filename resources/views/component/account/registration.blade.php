@@ -48,7 +48,7 @@
     <script>
         $("#registrationForm").submit(function(e) 
         {
-            e.preventDefault();
+            e.preventDefault();x
 
             $.ajax({
                 url: '{{ route('account.processRegistration') }}',
