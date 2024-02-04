@@ -8,7 +8,7 @@
     <title>job360</title>
 </head>
 <body>
-    <h1>Index page of 360</h1>
+    <h1>Index page of 360 degree</h1>
 </body>
 </html> --}}
 @extends('component.layout.app')
@@ -19,6 +19,7 @@
 <section class="section-0 lazy d-flex bg-image-style dark align-items-center "   class="" data-bg="{{asset('assets/images/banner5.jpg')}}">
     <div class="container">
         <div class="row">
+            
             <div class="col-12 col-xl-8">
                 <h1>Find your dream job</h1>
                 <p>Thounsands of jobs available.</p>
