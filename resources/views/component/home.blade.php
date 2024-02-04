@@ -8,7 +8,7 @@
     <title>job360</title>
 </head>
 <body>
-    <h1>Index page of 360</h1>
+    <h1>Index page of 360 degree</h1>
 </body>
 </html> --}}
 @extends('component.layout.app')
