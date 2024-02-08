@@ -94,27 +94,27 @@ class AccountController extends Controller
 
         $Validator = Validator::make($request->all(), [
             'name' => 'required|min:5|max:20',
-            'email' => 'required|email|unique:users,email,' . $id . ',id'
+            'email' => 'required|email|unique:users,email,'.$id.',id'
         ]);
 
         if($Validator->passes()){
-            $user = user::find($id);
+            $user = User::find($id);
             $user->name = $request->name;
             $user->email = $request->email;
             $user->mobile = $request->mobile;
             $user->designation = $request->designation;
-            $user->save;
+            $user->save();
 
             session()->flash('success','Profile Updated Successfully.');
 
             return response()->json([
                 'status'=>true,
-                'error' => []
+                'errors' => []
             ]);
         }else{
             return response()->json([
                 'status'=>false,
-                'error' => $Validator->error()
+                'errors' => $Validator->errors()
             ]);
         }
     }
@@ -123,5 +123,11 @@ class AccountController extends Controller
     {
         Auth::logout();
         return redirect()->route('account.login');
+    }
+
+    public function updateprofilepic(Request $request){
+        dd($request->all());
+        
+
     }
 }

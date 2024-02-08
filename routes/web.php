@@ -48,9 +48,11 @@ Route::group(['account'], function(){
         }); 
     //authorized Route
         Route::group(['middleware' =>'auth'], function(){
-        Route::get('/account/profile', [AccountController::class, 'profile'])->name('account.profile');
-        Route::get('/account/logout', [AccountController::class, 'logout'])->name('account.logout');
-        Route::get('/account/updateProfile', [AccountController::class, 'updateProfile'])->name('account.updateProfile');
-    });
+            Route::get('/account/profile', [AccountController::class, 'profile'])->name('account.profile');
+            Route::get('/account/logout', [AccountController::class, 'logout'])->name('account.logout');
+            Route::post('/account/updateProfile', [AccountController::class, 'updateProfile'])->name('account.updateProfile');
+            Route::post('/account/update-profile-pic', [AccountController::class, 'updateprofilepic'])->name('account.updateprofilepic');
+
+        });
 
 });

@@ -57,7 +57,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form>
+        <form id="updateprofilepic" name="updateprofilepic" action="" method="">
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Profile Image</label>
                 <input type="file" class="form-control" id="image"  name="image">
@@ -91,6 +91,24 @@
 		headers: {
 			'X-CSRF-TOKEN' : $('meta[name="csrf-token"]').attr('content')
 		}
+	});
+
+	$("#updateprofilepic").submit(function(e){
+		e.preventDefault();
+
+		var formdata = new FormData(this)
+
+		$.ajax({
+			url:'{{route("account.updateprofilepic")}}',
+			type:'post',
+			data: formData,
+			dataType:'json',
+			contentType: false,
+			processData:false,
+			success:function(response){
+
+			}
+		});
 	});
 
 </script>

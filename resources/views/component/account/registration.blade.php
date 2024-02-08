@@ -25,7 +25,7 @@
                                 <input type="password" name="password" id="password" class="form-control"
                                     placeholder="Enter Password">
                                 <p></p>
-                            </div>
+                            </div> 
                             <div class="mb-3">
                                 <label for="" class="mb-2">Confirm Password*</label>
                                 <input type="password" name="confirm_password" id="confirm_password" class="form-control"
@@ -48,7 +48,7 @@
     <script>
         $("#registrationForm").submit(function(e) 
         {
-            e.preventDefault();x
+            e.preventDefault();
 
             $.ajax({
                 url: '{{ route('account.processRegistration') }}',
