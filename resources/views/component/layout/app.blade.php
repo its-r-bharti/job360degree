@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en_AU" />
+<html class="no-js" lang="en_AU" >
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<title>job360 | Find Best Jobs</title>
@@ -96,7 +96,7 @@
 	$("#updateprofilepic").submit(function(e){
 		e.preventDefault();
 
-		var formdata = new FormData(this)
+		var formdata = 
 
 		$.ajax({
 			url:'{{route("account.updateprofilepic")}}',
